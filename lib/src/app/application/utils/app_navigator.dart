@@ -1,0 +1,3 @@
+void goToRegisterPage() {}
+
+void goToLoginPage() {}
