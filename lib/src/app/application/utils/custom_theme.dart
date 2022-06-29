@@ -18,7 +18,7 @@ getTheme() => ThemeData(
           ),
           backgroundColor: MaterialStateProperty.all<Color>(kColorBlack),
           foregroundColor: MaterialStateProperty.all<Color>(kColorWhite),
-          textStyle: MaterialStateProperty.all<TextStyle>(TextStyle(fontSize: kDimens20)),
+          textStyle: MaterialStateProperty.all<TextStyle>(const TextStyle(fontSize: kDimens20)),
         ),
       ),
     );
