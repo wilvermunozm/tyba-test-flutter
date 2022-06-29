@@ -11,7 +11,7 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedBackgroundAuthWidget(
       flex: 7,
-      secondAction: () => goToLoginPage(),
+      secondAction: () => goToLoginPage(context: context),
       secondActionText: "Ya tengo una cuenta",
       child: RegisterForm(
         errors: [],

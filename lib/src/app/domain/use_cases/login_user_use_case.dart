@@ -7,7 +7,7 @@ class LoginUserUseCase {
 
   LoginUserUseCase({required UserRepository userRepository}) : _userRepository = userRepository;
 
-  Future<UserModel?> logIn({required String userName, required String password}) {
+  Future<UserModel?> invoke({required String userName, required String password}) {
     return _userRepository.loginUser(userName: userName, password: password);
   }
 }

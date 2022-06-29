@@ -23,12 +23,10 @@ class AnimatedBackgroundAuthWidget extends StatefulWidget {
   });
 
   @override
-  _AnimatedBackgroundAuthWidgetState createState() =>
-      _AnimatedBackgroundAuthWidgetState();
+  _AnimatedBackgroundAuthWidgetState createState() => _AnimatedBackgroundAuthWidgetState();
 }
 
-class _AnimatedBackgroundAuthWidgetState
-    extends State<AnimatedBackgroundAuthWidget> with TickerProviderStateMixin {
+class _AnimatedBackgroundAuthWidgetState extends State<AnimatedBackgroundAuthWidget> with TickerProviderStateMixin {
   AnimationController? controller1;
   AnimationController? controller2;
   Animation<double>? animation1;
@@ -118,7 +116,7 @@ class _AnimatedBackgroundAuthWidgetState
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: kColorBlack.withOpacity(.5),
+      backgroundColor: kColorWhite,
       body: ScrollConfiguration(
         behavior: MyBehavior(),
         child: SingleChildScrollView(
@@ -179,7 +177,7 @@ class _AnimatedBackgroundAuthWidgetState
                         ),
                       ),
                     ),
-                    AppLogo(width: kDimens50),
+                    const AppLogo(width: kDimens100),
                     Expanded(
                       flex: widget.flex,
                       child: widget.child,
@@ -245,8 +243,7 @@ class MyPainter extends CustomPainter {
 
 class MyBehavior extends ScrollBehavior {
   @override
-  Widget buildViewportChrome(
-      BuildContext context, Widget child, AxisDirection axisDirection) {
+  Widget buildViewportChrome(BuildContext context, Widget child, AxisDirection axisDirection) {
     return child;
   }
 }

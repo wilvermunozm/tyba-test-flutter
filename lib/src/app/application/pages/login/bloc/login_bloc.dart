@@ -51,7 +51,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     if (state.status.isValidated) {
       emit(state.copyWith(status: FormzStatus.submissionInProgress));
       try {
-        UserModel? user = await _loginUseCase.logIn(
+        UserModel? user = await _loginUseCase.invoke(
           userName: state.username.value,
           password: state.password.value,
         );

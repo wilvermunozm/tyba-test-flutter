@@ -6,7 +6,7 @@ class AppLogo extends StatelessWidget {
   final double? width;
   final double? height;
 
-  AppLogo({
+  const AppLogo({
     this.width,
     this.height,
     Key? key,
